@@ -6,8 +6,7 @@ app = Flask(__name__)
 def predict():
     data = request.get_json()
     name = data.get('name', 'User')
-    result = {'message': f'Hello from Python, {name}!'}
-    return jsonify(result)
+    return jsonify({'message': f'Hello from Python, {name}!'})
 
 if __name__ == '__main__':
-    app.run(port=5000)  # Runs on localhost:5000
+    app.run(host='0.0.0.0', port=5000)
