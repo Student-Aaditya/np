@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
   try {
-    const response = await axios.post('http://localhost:5000/predict', {
+    const response = await axios.post('http://flask-api-np-l69s.onrender.com//predict', {
       name: 'Aaditya'
     });
 
